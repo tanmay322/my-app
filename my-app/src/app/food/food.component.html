@@ -1,0 +1,13 @@
+<p>Top results!</p>
+<div *ngFor="let article of articles">
+    <h2>{{article.name}}</h2>
+      <p>
+        {{article.rating}}
+      </p> 
+      <div>
+        <a [routerLink]="['/profile']" routerLinkActive="router-link-active" class="btn btn-primary"
+        (click)="viewProfile(article)">View Profile</a>
+    </div>
+        
+  </div>
+  
