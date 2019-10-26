@@ -2,6 +2,9 @@
 <div *ngFor="let article of articles">
     <h2>{{article.name}}</h2>
       <p>
+          <img src= "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photo_reference={{article.photos[0].photo_reference}}&key=AIzaSyCQxrCycy69Nm24iI3nXOfLRNNXLyHfs5Y"
+          alt="No img">
+      <br>
         Ratings: 
         {{article.rating}}
       </p> 
