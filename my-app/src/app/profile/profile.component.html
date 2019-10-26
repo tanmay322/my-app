@@ -3,5 +3,3 @@
     <img src= "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={{currentRest.photos[0].photo_reference}}&key=AIzaSyCQxrCycy69Nm24iI3nXOfLRNNXLyHfs5Y"
     alt="No img">
     <p>{{currentRest.formatted_address}}</p>
-    <a [routerLink]="['/']" routerLinkActive="router-link-active" class="btn btn-primary"
-    (click)="backtoSearch()">Back to Search</a>

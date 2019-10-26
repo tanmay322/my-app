@@ -9,6 +9,7 @@ import { NgModel } from '@angular/forms';
 export class GetFoodService {
 
   API_KEY:string = 'AIzaSyCQxrCycy69Nm24iI3nXOfLRNNXLyHfs5Y';
+  food: any;
   constructor(private httpClient: HttpClient) { }
   
   profile:any;
