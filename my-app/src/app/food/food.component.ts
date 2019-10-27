@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GetFoodService } from  '../get-food.service';
+// changes made here
+import { Subscription } from 'rxjs';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-food',
@@ -9,7 +12,8 @@ import { GetFoodService } from  '../get-food.service';
 export class FoodComponent implements OnInit {
   currentRest: any;
   articles;
-  constructor(private apiService: GetFoodService) { }
+  // changes made here
+  constructor(private apiService: GetFoodService, comp_app: AppComponent) { }
   showProfile: boolean;
   ngOnInit() {
     this.apiService.getRestaurant().subscribe((data)=>{
@@ -22,8 +26,8 @@ export class FoodComponent implements OnInit {
     this.currentRest=restaurent;
     this.apiService.setRestaurant(restaurent);
   }
-  backtoSearch(){
-    this.showProfile=false;
-  }
+  // backtoSearch(){
+  //   this.showProfile=false;
+  // }
 
 }

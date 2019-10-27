@@ -1,4 +1,15 @@
-<p>Top results!</p>
+ <!-- <div class="row float-right">
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" name="search1" [(ngModel)]="value" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/food"> Search</button>
+  </form> 
+</div>
+<router-outlet></router-outlet>
+<br>
+<br> -->
+
+
+<!-- <p>Top results!</p> -->
 <div *ngFor="let article of articles">
     <h2>{{article.name}}</h2>
       <p>
@@ -9,6 +20,7 @@
         {{article.rating}}
       </p> 
       <div>
+        
         <a [routerLink]="['/profile']" routerLinkActive="router-link-active" class="btn btn-primary"
         (click)="viewProfile(article)">View Profile</a>
     </div>

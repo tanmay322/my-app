@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetFoodService } from  '../get-food.service';
+// changes made here
+import { FoodComponent} from '../food/food.component';
 
 @Component({
   selector: 'app-profile',
