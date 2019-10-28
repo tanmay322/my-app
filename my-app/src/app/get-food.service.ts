@@ -18,7 +18,8 @@ export class GetFoodService {
   
 
   public getRestaurant(){
-    return this.httpClient.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+${document.getElementById("search1").getAttribute('ng-reflect-model')}&key=${this.API_KEY}`);
+    // return this.httpClient.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+${document.getElementById("search1").getAttribute('ng-reflect-model')}&key=${this.API_KEY}`);
+    return this.httpClient.get("http://localhost:3000/food");
   }
   public setRestaurant(profile: any){
     this.profile = profile;

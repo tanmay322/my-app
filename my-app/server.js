@@ -7,9 +7,9 @@ const cors = require('cors')
 
 app.use(cors())
 
-app.use(express.static(path.join(__dirname, 'dist', 'myapp')))
+app.use(express.static(path.join(__dirname, 'dist', 'my-app')))
 
-const googlePlaceQueryUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+albany&key=AIzaSyCQxrCycy69Nm24iI3nXOfLRNNXLyHfs5Y"
+const googlePlaceQueryUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyCQxrCycy69Nm24iI3nXOfLRNNXLyHfs5Y"
 
 app.get('/food', (req, res) => {
     request.get(googlePlaceQueryUrl)
